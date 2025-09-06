@@ -7,7 +7,7 @@ model = joblib.load("logistic_model.pkl")
 
 st.set_page_config(page_title="Titanic Survival Prediction", layout="centered")
 
-st.title("🚢 Titanic Survival Prediction")
+st.title("Titanic Survival Prediction")
 st.write("Enter passenger details below to predict survival.")
 
 # Sidebar for user inputs
@@ -31,6 +31,7 @@ if st.button("Predict Survival"):
 
     st.subheader("Prediction Result:")
     if prediction == 1:
-        st.success(f"✅ Passenger Survived (Probability: {prediction_proba:.2f})")
+        st.success(f"Passenger Survived (Probability: {prediction_proba:.2f})")
     else:
-        st.error(f"❌ Passenger Did Not Survive (Probability: {prediction_proba:.2f})")
+        st.error(f"Passenger Did Not Survive (Probability: {prediction_proba:.2f})")
+
